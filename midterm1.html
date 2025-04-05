@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and Styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silakbo: The 5 Stages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+            scroll-behavior: smooth;
+            font-family: 'Courier New', monospace;
+            color: #020202;
+            overflow-x: hidden;
+        }
+
+        /* Section Styles */
+        section {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #cf0000;
+        }
+
+        /* Landing Section Styles */
+        #landing {
+            background-image: url("LANDING BG.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            color: #fff;
+        }
+
+        .landing-text {
+            position: absolute;
+            top: 4%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .landing-text h1 {
+            margin: 0;
+            font-size: 4em;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px #000;
+            font-family: 'Rock Salt', cursive;
+        }
+
+        .landing-text p {
+            margin: 0;
+            font-size: 1.3em;
+            color: #ddd;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        /* Stage Section Styles */
+        .stage {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("SECTION BG.png");
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #eaeaea;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .stage h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #f0f0f0;
+        }
+
+        .quote-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .quote {
+            background-color: #0a0a1b;
+            border-left: 4px solid #2a0466;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            color: #eaeaea;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        /* Divider Styles */
+        .divider {
+            width: 100%;
+            height: 400px;
+            background-image: url("DIVIDER.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% auto;
+            background-color: #020202;
+        }
+
+        /* Final Remarks Section Styles */
+        .final-remarks {
+            background-color: #020202;
+            color: #bbb;
+            text-align: center;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .final-remarks h2 {
+            font-size: 2em;
+            margin-bottom: 0px;
+        }
+
+        .final-remarks p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer Styles */
+        .site-footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#denial">Denial</a></li>
+            <li><a href="#anger">Anger</a></li>
+            <li><a href="#bargaining">Bargaining</a></li>
+            <li><a href="#depression">Depression</a></li>
+            <li><a href="#acceptance">Acceptance</a></li>
+            <li><a href="#final">Final Words</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Section -->
+    <section id="landing">
+        <div class="landing-text">
+            <h1>Silakbo</h1>
+            <p>the grief that sings quietly in the night</p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section id="divider" class="divider"></section>
+
+    <!-- Denial Section -->
+    <section id="denial" class="stage">
+        <h2>Denial</h2>
+        <div class="quote-container">
+            <div class="quote">
+                <p>Kalangitan, araw at buwan<br/>
+                    Lahat isinumpa<br/>
+                    Dugo't pawis, 'di na maalis<br/>
+                    Ito ba'y nakatakda<br/>
+                    Kahit na sandali, isang saglit<br/>
+                    Mayakap ka muli, 'to ba'y mali?<br/>
+                    Kahit na sandali, isang saglit<br/>
+                    Mayakap ka muli, 'to ba'y mali?<br/>
+                </p>
+                <span class="quote-author">— Cup of Joe, Bagyo</span>
+            </div>
+            <div class="quote">
+                <p>Mga aninong sa 'yo lang lumilibot<br/>
+                    Ang aking unan na 'di pa makalimot<br/>
+                    'Cause I can't help myself<br/>
+                    If somebody's holding you tonight
+                </p>
+                <span class="quote-author">— Cup of Joe, Wine</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section id="divider" class="divider"></section>
+
+    <!-- Anger Section -->
+    <section id="anger" class="stage">
+        <h2>Anger</h2>
+        <div class="quote-container">
+            <div class="quote">
+                <p>Sa ilalim ng mga bituin<br/>
+                    Ang marilag mong diwa ‘di na muling madadampi<br/>
+                    Mga ngiti mo’y ayaw nang mapalayo<br/>
+                    Kanela mong mga mata’y ‘wag na sanang lumingon
+                </p>
+                <span class="quote-author">— Cup of Joe, Kanelang Mata</span>
+            </div>
+            <div class="quote">
+                <p>Dahil ayaw kong tumingin sa salamin<br/>
+                    At mapagtantong mahirap ngang tanggapin<br/>
+                    Ang ‘sang tulad kong paulit-ulit na pinipilit<br/>
+                    Maging sapat gawin man ang lahat<br/>
+                    Kailan kita masisilayan<br/>
+                    At kakayanang pagmasdan
+                </p>
+                <span class="quote-author">— Cup of Joe, Bubog</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section id="divider" class="divider"></section>
+
+    <!-- Bargaining Section -->
+    <section id="bargaining" class="stage">
+        <h2>Bargaining</h2>
+        <div class="quote-container">
+            <div class="quote">
+                <p>Hanggang kailan kaya ako mananaginip nang gising<br/>
+                    Hanggang kailan pa ba ako maglalakad nang nakapikit<br/>
+                    Mayroon pa bang patutunguhan kung ako na lang<br/>
+                    Ang nag-iisang humihiling at nagbabakasali
+                </p>
+                <span class="quote-author">— Cup of Joe, Siping</span>
+            </div>
+            <div class="quote">
+                <p>Sa lahat ng pahinang sinulat ng tadhana’y<br/>
+                    Ikaw at ikaw at ikaw pa rin<br/>
+                    Ang yugtong paulit-ulit kong babalik-balikan<br/>
+                    Sigaw ay sigaw ay ikaw pa rin<br/>
+                    Ikaw at ikaw at ikaw pa rin<br/>
+                    Ang yugtong paulit-ulit kong babalik-balikan<br/>
+                    Sigaw ay sigaw ay ikaw pa rin
+                </p>
+                <span class="quote-author">— Cup of Joe, Pahina</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section id="divider" class="divider"></section>
+
+    <!-- Depression Section -->
+    <section id="Depression" class="stage">
+        <h2>Depression</h2>
+        <div class="quote-container">
+            <div class="quote">
+                <p>Hindi na makalaya<br/>
+                    Dinadalaw mo 'ko bawat gabi<br/>
+                    Wala mang nakikita<br/>
+                    Haplos mo'y ramdam pa rin sa dilim
+                </p>
+                <span class="quote-author">— Cup of Joe, Multo</span>
+            </div>
+            <div class="quote">
+                <p>Kahit sandali, makapiling ka<br/>
+                    Sa ’king panaginip, makasama ka<br/>
+                    Bago pa ‘ko magising<br/>
+                    Gusto ko lang sabihing<br/>
+                    Nagsisisi<br/>
+                    Ako’y nagkamali<br/>
+                    Mayakap kang muli<br/>
+                    ‘Di maaari</p>
+                <span class="quote-author">— Cup of Joe, 'Di Maari</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section id="divider" class="divider"></section>
+
+    <!-- Acceptance Section -->
+    <section id="anger" class="stage">
+        <h2>Acceptance</h2>
+        <div class="quote-container">
+            <div class="quote">
+                <p>Nakakahingal na kadiliman<br/>
+                    Hindi mamukhaan ang sariling hangganan<br/>
+                    Huminto, subukang huminga<br/>
+                    Harapin, buksan ang ‘yong mata<br/>
+                    Walang bituin ‘pag walang kadiliman
+                </p>
+                <span class="quote-author">— Cup of Joe, Hinga</span>
+            </div>
+            <div class="quote">
+                <p>Hayaang sumigaw ang pusong nabilanggo<br/>
+                    Sumabay na sa awitin pakinggan ang tibok<br/>
+                    ‘Wag na tatalikuran ang bigat ng unos<br/>
+                    ‘Pag nasugat ‘wag pigilan ang silakbo
+                </p>
+                <span class="quote-author">— Cup of Joe, Silakbo</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <section id="divider" class="divider"></section>
+
+    <!-- Final Words Section -->
+    <section id="final" class="final-remarks">
+        <h2>Final Words</h2>
+        <p>Grief isn't linear. But sometimes, writing things down makes the silence softer. STREAM SILAKBO ALBUM!!!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2025 Merry Siemonne O. Martin. All rights reserved.</p>
+    </footer>
+</body>
+</html>
